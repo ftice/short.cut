@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+<head>
+   <meta charset='UTF-8'>
+   <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+   <title>short⌘cut - Quiz Mode</title>
+   <!-- Stylesheet -->
+   <link rel='stylesheet' href='./style.css'>
+   <!-- Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+   <!-- Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+   <body>
+      <div id="nav-bar">
+         <a href="index.html"><h1 id="header">short⌘cut</h1></a>
+     </div>
+     
+     <!-- Quiz Settings -->
+     <div id="quiz-settings">
+         
+         <form id="quiz-settings-form">
+
+            <div class="form-group">
+               <h2>Quiz Settings</h2>
+               <label for="question-count">Questions</label>
+               <input type="number" id="question-count" name="question-count" value="10">
+            </div>
+
+            <button id="start-quiz" onclick="startQuiz(); return false;">Start</button>
+
+         </form>
+
+      </div>
+
+      <script>
+         function startQuiz() {
+             // Get the user-entered time limit and number of questions
+             const numQuestions = document.getElementById("question-count").value;
+     
+             // Store these settings in localStorage
+             localStorage.setItem("numQuestions", numQuestions);
+     
+             // Redirect to the quiz page
+             window.location.href = "quiz.html";
+         }
+     </script>
+
+   </body>
+
+</html>

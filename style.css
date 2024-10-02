@@ -1,0 +1,362 @@
+/* Color Styles */
+:root {
+    --background: #444655;
+    --text-color: #fff;
+}
+
+/* Primitives */
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--background);
+    margin: 0;
+    font-family: 'Space Grotesk', sans-serif;
+}
+
+h2 {
+    font-size: 20pt;
+    color: var(--text-color);
+}
+
+p {
+    font-size: 14pt;
+}
+
+a {
+    text-decoration: none;
+}
+
+button {
+    background-color: #343640;
+    border: none;
+    border-radius: 8px;
+    margin: 0;
+    padding: 8px 16px;
+
+    font-family: 'Space Grotesk', sans-serif;
+    font-size: 16pt;
+    font-weight: 700;
+    color: var(--text-color);
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #32343e;
+}
+button:active {
+    background-color: #30323b;
+}
+
+
+
+
+
+/* Header */
+#nav-bar {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    padding: 8px 0px;
+
+    background-color: #343640;
+}
+
+#header {
+    color: var(--text-color);
+    margin: 0;
+}
+
+
+
+/* Intro Section */
+#intro-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin: 48px;
+    gap: 16px;
+
+    color: var(--text-color);
+}
+
+#intro-section p {
+    margin: 0;
+    width: 800px; /* Fixed width for intro section copy */
+}
+#intro-section h2 {
+    margin: 0;
+}
+
+
+
+/* Game Mode Buttons */
+#gamemode-buttons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 16px;
+}
+
+.square-button {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 16px; /* Spacing between icon and text */
+
+    font-weight: 700;
+}
+
+.square-button i {
+    font-size: 48px; /* Icon Size in buttons */
+}
+
+.square-button:disabled {
+    opacity: 50%;
+    cursor: not-allowed;
+}
+
+#center-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Center vertically */
+    align-items: center; /* Center horizontally */
+    margin: 0;
+    height: calc(100vh - 56px); /* Full viewport height */
+}
+
+
+
+
+
+/* Quiz */
+
+#quiz-settings {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    height: calc(100vh - 56px); /* Full viewport height */
+}
+
+#quiz-settings-form {
+    display: flex;
+    flex-direction: column;
+
+    margin: 0 auto;
+    padding: 24px;
+    background-color: #343640;
+    border-radius: 8px;
+    width: 400px;
+    gap: 24px;
+    
+    color: var(--text-color);
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+}
+
+.form-group label {
+    margin-bottom: 8px;
+}
+
+.form-group input {
+    background-color: #444655;
+    border: none;
+    border-radius: 4px;
+    height: 40px;
+    padding: 0 16px;
+    font-size: 14pt;
+
+    color: var(--text-color);
+}
+
+.form-group h2 {
+    margin: 0;
+    margin-bottom: 16px;
+}
+
+#quiz-settings-form button {
+    background-color: #fff;
+    color: #343640;
+}
+
+#quiz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 16px;
+    height: calc(100vh - 56px); /* Full viewport height */
+    
+    color:var(--text-color);
+}
+
+#answer-options {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    margin-top: 8px;
+    gap: 16px;
+}
+
+#answer-options button {
+    width: 500px;
+    height: 48px;
+}
+
+
+#game-score {
+    font-size: 16pt;
+    margin-top: 8px;
+}
+
+#next-button {
+    background-color: #fff;
+    color:#343640;
+}
+
+#next-button:disabled {
+    opacity: 25%;
+    cursor: not-allowed;
+}
+
+
+
+/* Key Blitz */
+
+#countdown-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 16px;
+    height: calc(100vh - 56px); /* Full viewport height */
+}
+
+#countdown {
+    font-size: 48pt;
+}
+
+#blitz-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0;
+    gap: 16px;
+    
+    color:var(--text-color);
+}
+
+.question {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--text-color);
+}
+
+.shortcut-box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 124px;
+    height: 124px;
+    background-color: #343640;
+    color: var(--text-color);
+    font-size: 24pt;
+    font-weight: bold;
+    border-radius: 8px;
+}
+
+#key-boxes {
+    display: flex;
+    gap: 16px;
+}
+
+/* Results */
+
+#score {
+    color: var(--text-color);
+}
+
+.scoreboard {
+    font-size: 48pt;
+}
+
+#scoreboard {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#result-buttons {
+    display: flex;
+    gap: 16px; /* Button spacing */
+}
+
+#result-buttons button {
+    width: 200px;
+    height: 48px;
+}
+ #result-buttons button i {
+    margin-right: 8px; /* Icon to text spacing */
+ }
+
+ #question-count h2 {
+    display: inline-block;
+    margin-right: 0px;
+ }
+
+ #summary-screen {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 48px;
+    height: calc(100vh - 56px); /* Full viewport height */
+ }
+
+ /* confetti.css */
+
+#confetti-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    pointer-events: none;
+    overflow: hidden;
+    z-index: -1; /* Set a lower z-index to keep it behind other elements */
+}
+
+.confetti {
+    width: 6px;
+    height: 10px;
+    position: absolute;
+    background-color: #e44d26; /* Change color as needed */
+    animation: confetti-fall linear infinite;
+}
+
+@keyframes confetti-fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+    }
+}

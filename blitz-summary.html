@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+
+<html lang='en'>
+
+   <head>
+      <meta charset='UTF-8'>
+      <meta name='viewport' content='width=device-width, initial-scale=1.0'>
+      <title>short⌘cut - Key Blitz Results</title>
+      <!-- Stylesheet -->
+      <link rel='stylesheet' href='./style.css'>
+      <!-- Icons -->
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"/>
+      <!-- Fonts -->
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+   </head>
+
+   <body>
+    <div id="nav-bar">
+        <a href="index.html"><h1 id="header">short⌘cut</h1></a>
+    </div>
+    
+    <div id="summary-screen">
+        <!-- Scoreboard -->
+        <div id="scoreboard">
+            <h1 id="score" class="scoreboard"></h1>
+            <div id="question-count">
+                <h2 id="correct-answers"></h2>
+                <h2 id="total-questions"></h2>  
+            </div>
+        </div>
+        <!-- Actions -->
+        <div id="result-buttons">
+            <!-- Plag Again Button -->
+            <a href="key-blitz.html"> 
+                <button class="play-again">
+                    <i class="fa-solid fa-rotate"></i>Play again
+                </button>
+            </a>
+            <!-- Go Home Button -->
+            <a href="index.html">
+                <button class="go-home">
+                    <i class="fa-regular fa-compass"></i>Go home
+                </button>
+            </a>
+        </div>
+    </div>
+
+    <div id="confetti-container"></div>        
+
+    <script>
+        window.onload = function() {
+            const urlParams = new URLSearchParams(window.location.search);
+            const score = urlParams.get('score');
+            const correctAnswers = urlParams.get('correctAnswers');
+            const totalQuestions = urlParams.get('totalQuestions');
+
+            // Display these values in appropriate elements in your HTML
+            document.getElementById('score').textContent = `Score: ${score}`;
+            document.getElementById('correct-answers').textContent = `${correctAnswers}`;
+            document.getElementById('total-questions').textContent = ` / ${totalQuestions}`;
+        };
+    </script>
+
+    <!-- Confetti -->
+    <script src="confetti.js"></script>
+ 
+   </body>
+
+</html>
